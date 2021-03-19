@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Custom Video Player</title>
+    <title>Musicas do Bando</title>
     <link rel="icon" type="image/png" href="favicon.png" />
     <link
       rel="stylesheet"
@@ -12,71 +12,29 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Quebrando a parede -->
-    <!--     https://pixabay.com/videos/download/video-7376_small.mp4?attachment
- -->
-    <!-- Trator -->
-    <!--     https://pixabay.com/videos/download/video-21233_small.mp4?attachment
- -->
-    <!-- Martelando -->
-    <!--     https://pixabay.com/videos/download/video-277_small.mp4?attachment
- -->
-    <div class="player">
-      <video
-        src="https://pixabay.com/videos/download/video-21233_small.mp4?attachment"
-        class="video"
-        playsinline
-      ></video>
-      <!-- mostrar controles -->
-      <div class="show-controls">
-        <!-- container de controler -->
-        <div class="controls-container">
-          <!-- barra de progresso -->
-          <div class="progress-range" title="Selecione">
-            <!-- barra de progresso -->
-            <div class="progress-bar"></div>
-          </div>
-          <div class="control-group">
-            <!-- controles da esquerda -->
-            <div class="controls-left">
-              <!-- play/pause -->
-              <div class="play-controls">
-                <i class="fas fa-play" title="play" id="play-btn"></i>
-              </div>
-              <!-- controles de volume -->
-              <div class="volume">
-                <div class="volume-icon">
-                  <i class="fas fa-volume-up" title="mute" id="volume-icon"></i>
-                </div>
-                <div class="volume-range" title="controle de volume">
-                  <div class="volume-bar"></div>
-                </div>
-              </div>
-            </div>
-            <!-- controles da direita -->
-            <div class="controls-right">
-              <!--  velocidade -->
-              <div class="speed">
-                <select name="playbackRate" class="player-speed">
-                  <option value="0.5">0.5 x</option>
-                  <option value="0.75">0.75 x</option>
-                  <option value="1" selected>1 x</option>
-                  <option value="1.5">1.5 x</option>
-                  <option value="2">2 x</option>
-                </select>
-              </div>
-              <!-- time -->
-              <div class="time">
-                <span class="time-elapsed"> 00:00 / </span>
-                <span class="time-duration"> 0:22 </span>
-              </div>
-              <!-- fullscreen -->
-              <div class="fullscreen">
-                <i class="fas fa-expand"></i>
-              </div>
-            </div>
-          </div>
+    <!-- player -->
+    <div class="player-container">
+      <!-- musica -->
+      <div class="img-container">
+        <img src="img/a-agua-e-uma-so.jpg" alt="A água é uma só" />
+      </div>
+      <h2 id="title">A água é uma só</h2>
+      <h3 id="artist">Bando de Seu Pereira</h3>
+      <audio src="music/a-agua-e-uma-so.mp3"></audio>
+      <!-- progresso -->
+      <div class="progress-container" id="progress-container">
+        <div class="progress" id="progress"></div>
+        <div class="duration-wrapper">
+          <span id="current-time">0:00</span>
+          <span id="duration">3:22</span>
         </div>
+      </div>
+      <!-- icones de controle-->
+      <div class="player-controls">
+        <i class="fas fa-backward" id="prev"></i>
+        <i class="fas fa-play-circle main-button" id="play"></i>
+        <i class="fas fa-forward" id="next"></i>
+        <!-- <i class="fas fa-pause-circle"></i> -->
       </div>
     </div>
     <!-- Script -->
