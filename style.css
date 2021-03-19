@@ -120,7 +120,18 @@ video {
 
 /* Play & Pause */
 .play-controls {
-  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.fa-backward {
+  font-size: 25px;
+  margin-right: 5px;
+}
+
+.fa-forward {
+  font-size: 25px;
 }
 
 .fa-play:hover,
